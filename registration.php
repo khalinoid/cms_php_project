@@ -20,9 +20,9 @@ if (isset($_POST['save_user'])) {
 
 
 
-            $query = "INSERT INTO users (username, password, user_email,user_firstname, user_role) VALUES('$username', '$password', '$email', 'Subscriber')";
+            $query = "INSERT INTO users (username, password, user_email, user_role) VALUES('$username', '$password', '$email', 'Subscriber')";
             $user_registration_query = mysqli_query($connection, $query);
-            
+
 
             if (!$user_registration_query) {
                 die("Query failed " . mysqli_error($connection));
